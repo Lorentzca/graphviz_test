@@ -8,6 +8,6 @@ dependencies:
 
 test:
   override:
-    - echo dotコマンド走らせる(dot -T png server-architecture.dot -o server-architecture.png)
+    - dot -T png server-architecture.dot -o server-architecture.png
   post:
     - echo hubコマンドでPR出す

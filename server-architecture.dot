@@ -1,0 +1,9 @@
+digraph "server-architecture" {
+  node [shape = box3d];
+
+  browser -> lb [dir = both, shape = oval];
+  lb -> web [dir = both];
+  web -> db [dir = both];
+
+  browser [shape = oval];
+}

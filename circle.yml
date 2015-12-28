@@ -4,7 +4,7 @@ machine:
 
 dependencies:
   pre:
-    - sudo apt-get install -y upstart-job ifupdown libpango-1.0-0 libpangocairo-1.0-0 libpangoft2-1.0-0 libgvc6 graphviz
+    - sudo apt-get install -y --fix-missing upstart-job ifupdown libpango-1.0-0 libpangocairo-1.0-0 libpangoft2-1.0-0 libgvc6 graphviz
 
 test:
   override:

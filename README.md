@@ -6,4 +6,4 @@ graphviz練習用リポジトリ
 
 この図が`server-architecture.dot`を修正するたびに自動で更新されるようにしたい
 
-[server-architecture](./server-architecture.png)
+![server-architecture](./server-architecture.png)

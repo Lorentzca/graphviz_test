@@ -11,4 +11,4 @@ test:
   override:
     - dot -T png server-architecture.dot -o server-architecture.png
   post:
-    - echo hubコマンドでPR出す
+    - hub -h

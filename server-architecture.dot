@@ -4,6 +4,7 @@ digraph "server-architecture" {
   browser -> lb [dir = both, shape = oval];
   lb -> web [dir = both];
   web -> db [dir = both];
+  test -> db [dir = both];
 
   browser [shape = oval];
 }

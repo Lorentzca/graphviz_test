@@ -11,6 +11,6 @@ test:
   override:
     - dot -T png server-architecture.dot -o server-architecture.png
   post:
-    - git git config --global user.email $MAIL
+    - git config --global user.email $MAIL
     - git config --global user.name $NAME
     - git diff --exit-code HEAD^ server-architecture.png; [ $? -eq 1 ] && git checkout -b test_br && git add server-architecture.png && git commit -m 'test commit' server-architecture.png && git push origin $(git rev-parse --abbrev-ref HEAD) && hub pull-request -m "test pr" -b Lorentzca:master -h Lorentzca:$(git rev-parse --abbrev-ref HEAD)

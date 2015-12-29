@@ -11,4 +11,4 @@ test:
   override:
     - dot -T png server-architecture.dot -o server-architecture.png
   post:
-    - hub -h
+    - git diff --exit-code HEAD^ server-architecture.png; [ $? -eq 1 ] && git co -b test_br && git add server-architecture.png && git commit -m 'test commit' server-architecture.png && git push origin $(git rev-parse --abbrev-ref HEAD) && hub pull-request -m "test pr" -b Lorentzca:master -h Lorentzca:$(git rev-parse --abbrev-ref HEAD)
